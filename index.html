@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+  <form id="new-item-form">
+    <div id="form-wrapper">
+
+      <div class="form-item">
+        <label for="coastername" class="primary">Coaster Name: </label>
+        <input type="text" id="coastername" required/>
+      </div>
+
+      <div class="form-item">
+        <label for="park" class="primary">Park: </label>
+        <input type="text" id="park" required/>
+      </div>
+
+      <div class="form-item">
+        <label for="rode" class="primary">Have you riden this coaster?</label>
+        <input type="radio" name="rode" value="yes" checked>Yes<br>
+        <input type="radio" name="rode" value="no"> No<br>
+      </div>
+
+
+      <div class="form-item"> Rating (between 0 and 10 to 1 d.p.): <input type="number" name="rating" step= "0.1" min="0" max="10" placeholder="6.5">
+      </div>
+
+
+    </div>
+    <input type="submit" value="save"/>
+  </form>
+
+  <button id="delete-all-button">Delete All</button>
+
+  <h1>Test</h1>
+  <div id="coaster-list">
+
+  </div>
+
+</body>
+</html>
