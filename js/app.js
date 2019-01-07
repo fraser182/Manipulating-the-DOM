@@ -1,22 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const newForm = document.querySelector('#new-item-form');
-  newForm.addEventListener('submit', handleNewFormSubmit);
+  const newForm = document.querySelector('#new-item-form'); // ELEMENT = #new-item-form
+  newForm.addEventListener('submit', handleNewFormSubmit); // EVENT = submit
 
-  const deleteAllButton = document.querySelector('#delete-all-button');
-  deleteAllButton.addEventListener('click', handleDeleteAllClick);
+  const deleteAllButton = document.querySelector('#delete-all-button'); // ELEMENT = #delete-all-button
+  deleteAllButton.addEventListener('click', handleDeleteAllClick); // EVENT = click
 })
 
+// CALLBACK - updates when handleNewFormSubmit is executed
 const handleNewFormSubmit = function (event) {
   event.preventDefault();
 
-  const rollerCoasterItem = createrollerCoasterItem(event.target);
+// rns createRollerCoasterItem
+  const rollerCoasterItem = createRollerCoasterItem(event.target);
   const coasterList = document.querySelector('#coaster-list');
   coasterList.appendChild(rollerCoasterItem);
 
   event.target.reset();
 }
 
-const createrollerCoasterItem = function (form) {
+const createRollerCoasterItem = function (form) {
   const rollerCoasterItem = document.createElement('div');
   rollerCoasterItem.classList.add('coaster-list-item');
 
@@ -38,7 +40,7 @@ const createrollerCoasterItem = function (form) {
 
   return rollerCoasterItem;
 }
-
+//  CALLBACK - updates html when handleDeleteAllClick is executed
 const handleDeleteAllClick = function (event) {
   const coasterList = document.querySelector('#coaster-list');
   coasterList.innerHTML = '';
