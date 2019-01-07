@@ -20,7 +20,7 @@ const createrollerCoasterItem = function (form) {
   const rollerCoasterItem = document.createElement('div');
   rollerCoasterItem.classList.add('coaster-list-item');
 
-  const coastername = document.createElement('p');
+  const coastername = document.createElement('h2');
   coastername.textContent = "Coaster Name: " + form.coastername.value;
   rollerCoasterItem.appendChild(coastername);
 
