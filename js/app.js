@@ -17,23 +17,23 @@ const handleNewFormSubmit = function (event) {
 }
 
 const createrollerCoasterItem = function (form) {
-  const rollerCoasterItem = document.createElement('li');
+  const rollerCoasterItem = document.createElement('div');
   rollerCoasterItem.classList.add('coaster-list-item');
 
-  const coastername = document.createElement('h2');
-  coastername.textContent = form.coastername.value;
+  const coastername = document.createElement('p');
+  coastername.textContent = "Coaster Name: " + form.coastername.value;
   rollerCoasterItem.appendChild(coastername);
 
-  const park = document.createElement('h3');
-  park.textContent = form.park.value;
+  const park = document.createElement('p');
+  park.textContent = "Park: " + form.park.value;
   rollerCoasterItem.appendChild(park);
 
   const rode = document.createElement('p');
-  rode.textContent = form.rode.value;
+  rode.textContent = "Have you rode this roller coaster? " + form.rode.value;
   rollerCoasterItem.appendChild(rode);
 
   const rating = document.createElement('p');
-  rating.textContent = form.rating.value;
+  rating.textContent = "Coaster Rating: " + form.rating.value;
   rollerCoasterItem.appendChild(rating);
 
   return rollerCoasterItem;
